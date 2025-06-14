@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Sensor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="amd.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Agro Bot
+          </a>
+        </div>
+      </nav>
+    <div class="container_box">
+        <h1>Remote Analysis</h1>
+
+        <div class="sensor-grid">
+            <div class="sensor-card temperature">
+                <h2>Temperature</h2>
+                <div class="sensor-value" id="temperature">--</div>
+                <div class="sensor-unit">°C</div>
+            </div>
+
+            <div class="sensor-card humidity">
+                <h2>Humidity</h2>
+                <div class="sensor-value" id="humidity">--</div>
+                <div class="sensor-unit">%</div>
+            </div>
+
+            <div class="sensor-card gas">
+                <h2>Gas Level</h2>
+                <div class="sensor-value" id="gas">--</div>
+                <div class="sensor-unit">ppm</div>
+            </div>
+
+            <div class="sensor-card soil">
+                <h2>Soil Moisture</h2>
+                <div class="sensor-value" id="soil">--</div>
+                <div class="sensor-unit">%</div>
+            </div>
+        </div>
+
+        <div class="last-updated">
+            Last updated: <span id="lastUpdated">Never</span>
+        </div>
+
+    </div>
+
+    <div class="p-5 text-center bg-body-tertiary recommendation">
+        <div class="container py-5">
+            <h1>Recommended Crop:</h1>
+            <h2 id="recommendation"></h2>
+            <p class="col-lg-8 mx-auto lead">
+                This recommendation is based on the above field analysis from our AgroBot. It is important to note that this recommendation is based on the current conditions and should not be taken as a final decision. It is recommended to consult a qualified agricultural expert for a comprehensive assessment.
+            </p>
+        </div>
+    </div>
+
+    <div class="container"> <footer class="py-3 my-4"> <ul class="nav justify-content-center border-bottom pb-3 mb-3"> <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li> </ul> <p class="text-center text-white">© 2025 Pratham & Soumya, Inc</p> </footer> </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+
+</html>
